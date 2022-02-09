@@ -1,7 +1,7 @@
 import 'package:dice_game_app/dice_page.dart';
 import 'package:dice_game_app/image_and_voice.dart';
+import 'package:dice_game_app/placeholder_widget.dart';
 import 'package:flutter/material.dart';
-import 'home_page.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -13,7 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State {
   int _currentIndex = 0;
   final List _children = [
-    const HomePage(),
+    PlaceholderWidget(Colors.orange),
     const DiceGame(),
     const ImageVoice()
   ];
