@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:dice_game_app/dice_page.dart';
 import 'package:dice_game_app/image_and_voice.dart';
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 import 'placeholder_widget.dart';
 
 class Home extends StatefulWidget {
@@ -15,7 +16,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State {
   int _currentIndex = 0;
   final List _children = [
-    PlaceholderWidget(Color.fromARGB(255, 34, 111, 255)),
+    const HomePage(),
     const DiceGame(),
     const ImageVoicePage()
   ];
