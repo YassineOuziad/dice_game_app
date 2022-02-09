@@ -1,12 +1,32 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class ImageVoicePage extends StatefulWidget {
-  const ImageVoicePage({Key? key}) : super(key: key);
+class ImageVoice extends StatefulWidget {
+  const ImageVoice({Key? key}) : super(key: key);
 
   @override
-  // ignore: no_logic_in_create_state
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    throw UnimplementedError();
+  State<StatefulWidget> createState() => _ImageVoice();
+}
+
+class _ImageVoice extends State<ImageVoice> {
+  final diceImages = <String>[
+    'images/w1.png',
+    'images/w2.png',
+    'images/w3.png',
+    'images/w4.png',
+    'images/w5.png',
+    'images/w6.png',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+        child: Scaffold(
+            body: GridView.count(
+                crossAxisCount: 2,
+                children: List.generate(6, (index) {
+                  return Container(
+                    child: Image.asset(diceImages[index]),
+                  );
+                }))));
   }
 }

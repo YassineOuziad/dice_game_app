@@ -15,7 +15,7 @@ class _HomeState extends State {
   final List _children = [
     const HomePage(),
     const DiceGame(),
-    const ImageVoicePage()
+    const ImageVoice()
   ];
 
   @override
