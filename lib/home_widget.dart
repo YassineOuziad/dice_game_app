@@ -1,10 +1,7 @@
-import 'dart:html';
-
 import 'package:dice_game_app/dice_page.dart';
 import 'package:dice_game_app/image_and_voice.dart';
 import 'package:flutter/material.dart';
 import 'home_page.dart';
-import 'placeholder_widget.dart';
 
 class Home extends StatefulWidget {
   @override
