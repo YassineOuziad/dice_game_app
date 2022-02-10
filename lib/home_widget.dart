@@ -23,15 +23,15 @@ class _HomeState extends State {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 91, 6, 124),
+        backgroundColor: const Color.fromARGB(255, 72, 141, 232),
         title: const Center(
-          child: Text('Funny App'),
+          child: Text('Dice 2D App'),
         ),
       ),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
-        selectedItemColor: const Color.fromARGB(255, 91, 6, 124),
+        selectedItemColor: const Color.fromARGB(255, 72, 141, 232),
         currentIndex: _currentIndex,
         items: const [
           BottomNavigationBarItem(

@@ -5,9 +5,13 @@ class PlaceholderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-        heightFactor: 100.0,
-        widthFactor: 100.0,
-        child: Image.asset('images/golddice.gif', scale: 1));
+    return Scaffold(
+        body: Center(
+            child: SizedBox(
+                height: double.infinity,
+                width: double.infinity,
+                child: FittedBox(
+                    child: Image.asset('images/golddice.gif'),
+                    fit: BoxFit.fill))));
   }
 }
