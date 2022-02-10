@@ -18,12 +18,12 @@ class _ImageVoice extends State<ImageVoice> {
     'images/dice6.png',
   ];
   final noise = <String>[
-    'voice/v1.wav',
-    'voice/v2.wav',
-    'voice/v3.wav',
-    'voice/v4.wav',
-    'voice/v5.wav',
-    'voice/v6.wav',
+    'assets/v1.wav',
+    'assets/v2.wav',
+    'assets/v3.wav',
+    'assets/v4.wav',
+    'assets/v5.wav',
+    'assets/v6.wav',
   ];
   AudioCache player = AudioCache();
   @override
@@ -34,7 +34,7 @@ class _ImageVoice extends State<ImageVoice> {
                 crossAxisCount: 2,
                 children: List.generate(6, (index) {
                   return GestureDetector(
-                    onTap: () {
+                    onDoubleTap: () {
                       player.play(noise[index]);
                     }, // Image tapped
                     child: Image.asset(diceImages[index]),
