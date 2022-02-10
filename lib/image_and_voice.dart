@@ -18,12 +18,12 @@ class _ImageVoice extends State<ImageVoice> {
     'images/dice6.png',
   ];
   final noise = <String>[
-    'assets/v1.wav',
-    'assets/v2.wav',
-    'assets/v3.wav',
-    'assets/v4.wav',
-    'assets/v5.wav',
-    'assets/v6.wav',
+    'sounds/v1.wav',
+    'sounds/v2.wav',
+    'sounds/v3.wav',
+    'sounds/v4.wav',
+    'sounds/v5.wav',
+    'sounds/v6.wav',
   ];
   AudioCache player = AudioCache();
   @override
