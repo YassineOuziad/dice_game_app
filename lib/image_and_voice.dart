@@ -9,12 +9,12 @@ class ImageVoice extends StatefulWidget {
 
 class _ImageVoice extends State<ImageVoice> {
   final diceImages = <String>[
-    'images/w1.png',
-    'images/w2.png',
-    'images/w3.png',
-    'images/w4.png',
-    'images/w5.png',
-    'images/w6.png',
+    'images/dice1.png',
+    'images/dice2.png',
+    'images/dice3.png',
+    'images/dice4.png',
+    'images/dice5.png',
+    'images/dice6.png',
   ];
 
   @override

@@ -13,7 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State {
   int _currentIndex = 0;
   final List _children = [
-    PlaceholderWidget(Colors.orange),
+    const PlaceholderWidget(),
     const DiceGame(),
     const ImageVoice()
   ];
