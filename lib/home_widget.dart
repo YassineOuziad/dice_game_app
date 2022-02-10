@@ -25,7 +25,7 @@ class _HomeState extends State {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 72, 141, 232),
         title: const Center(
-          child: Text('Dice 2D App'),
+          child: Text('Dice App 2D'),
         ),
       ),
       body: _children[_currentIndex],
