@@ -1,7 +1,67 @@
-@Startuml Order Taking
+@startuml
+set namespaceSeparator ::
 
-[Orders]..>[Menu] : use
-[Orders]..>[Payments] : use
-[Costumers]..>[Orders] : use
+class "dice_game_app::dice_page.dart::DiceGame" {
+  +_DiceGameState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "dice_game_app::dice_page.dart::DiceGame"
+
+class "dice_game_app::dice_page.dart::_DiceGameState" {
+  +int leftDiceNumber
+  +int rightDiceNumber
+  -ShakeDetector? _detector
+  +void initState()
+  +void rollDice()
+  +Widget build()
+  +void dispose()
+}
+
+"dice_game_app::dice_page.dart::_DiceGameState" o-- "shake::shake.dart::ShakeDetector"        
+"flutter::src::widgets::framework.dart::State" <|-- "dice_game_app::dice_page.dart::_DiceGameState"
+
+class "dice_game_app::home_widget.dart::Home" {
+  +State<StatefulWidget> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "dice_game_app::home_widget.dart::Home"
+
+class "dice_game_app::home_widget.dart::_HomeState" {
+  -int _currentIndex
+  -List<dynamic> _children
+  +Widget build()
+  +void onTabTapped()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "dice_game_app::home_widget.dart::_HomeState"
+
+class "dice_game_app::image_and_voice.dart::ImageVoice" {
+  +State<StatefulWidget> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "dice_game_app::image_and_voice.dart::ImageVoice"
+
+class "dice_game_app::image_and_voice.dart::_ImageVoice" {
+  +List<String> diceImages
+  +List<String> noise
+  +AudioCache player
+  +Widget build()
+}
+
+"dice_game_app::image_and_voice.dart::_ImageVoice" o-- "audioplayers::src::audio_cache.dart::AudioCache"
+"flutter::src::widgets::framework.dart::State" <|-- "dice_game_app::image_and_voice.dart::_ImageVoice"
+
+class "dice_game_app::main.dart::DiceApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "dice_game_app::main.dart::DiceApp"
+
+class "dice_game_app::placeholder_widget.dart::PlaceholderWidget" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "dice_game_app::placeholder_widget.dart::PlaceholderWidget"
+
 
 @enduml
