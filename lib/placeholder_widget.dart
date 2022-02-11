@@ -11,7 +11,7 @@ class PlaceholderWidget extends StatelessWidget {
                 height: double.infinity,
                 width: double.infinity,
                 child: FittedBox(
-                    child: Image.asset('images/golddice.gif'),
+                    child: Image.asset('assets/images/golddice.gif'),
                     fit: BoxFit.fill))));
   }
 }

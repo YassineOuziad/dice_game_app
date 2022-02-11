@@ -10,12 +10,12 @@ class ImageVoice extends StatefulWidget {
 
 class _ImageVoice extends State<ImageVoice> {
   final diceImages = <String>[
-    'images/dice1.png',
-    'images/dice2.png',
-    'images/dice3.png',
-    'images/dice4.png',
-    'images/dice5.png',
-    'images/dice6.png',
+    'assets/images/dice1.png',
+    'assets/images/dice2.png',
+    'assets/images/dice3.png',
+    'assets/images/dice4.png',
+    'assets/images/dice5.png',
+    'assets/images/dice6.png',
   ];
   final noise = <String>[
     'sounds/v1.wav',
